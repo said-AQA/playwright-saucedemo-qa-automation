@@ -1,83 +1,186 @@
-# Playwright SauceDemo QA Automation
+🎭 Playwright SauceDemo – QA Automation Framework
+## Présentation
 
-Projet portfolio de tests automatisés UI avec **Playwright + TypeScript** sur l’application **SauceDemo**.  
-Objectif : démontrer une approche QA “pro” (locators stables, assertions métier, organisation par features, helpers réutilisables).
+Ce projet est un framework d’automatisation des tests UI développé avec Playwright + TypeScript, appliqué au site de démonstration SauceDemo.
 
-##  Stack
-- Playwright Test Runner (`@playwright/test`)
-- TypeScript
-- Reporting Playwright (HTML report, traces)
+L’objectif est de démontrer :
 
-##  Structure du projet
-tests/
-auth/
-login.spec.ts
-logout.spec.ts
+une approche QA professionnelle
 
-inventory/
-inventory.spec.ts
-products.spec.ts
-sorting.spec.ts
+des tests fiables et maintenables
 
-cart/
-cart-badge.spec.ts
-cart-management.spec.ts
-remove-item.spec.ts
+une bonne structuration du projet
 
-checkout/
-checkout.spec.ts
+des preuves métier claires dans les assertions
 
-utils/
-auth.ts
-cart.ts
+Ce projet est conçu comme un portfolio QA Automation.
 
+## Périmètre fonctionnel couvert
 
-##  Installation
-```bash
+Les fonctionnalités suivantes sont automatisées :
+
+## Authentification
+
+Connexion avec identifiants valides
+
+Connexion refusée (identifiants invalides)
+
+Validation des champs requis
+
+Déconnexion (logout)
+
+## Inventory (Produits)
+
+Affichage de la liste des produits
+
+Présence des informations essentielles (nom, prix)
+
+Navigation vers la fiche produit
+
+## Panier
+
+Ajout d’un produit au panier
+
+Suppression d’un produit
+
+Gestion du badge panier (incrément / décrément)
+
+Vérification du contenu du panier
+
+## Checkout
+
+Parcours d’achat complet (E2E)
+
+Validation des informations client
+
+Message de confirmation de commande
+
+Cas négatif : informations manquantes
+
+## Tri des produits
+
+Nom : A → Z
+
+Nom : Z → A
+
+Prix : du moins cher au plus cher
+
+Prix : du plus cher au moins cher
+## Vérification métier de l’ordre réel affiché
+
+## Stack technique
+
+Playwright Test
+
+TypeScript
+
+Node.js
+
+Git / GitHub
+
+HTML Report Playwright
+
+Trace Viewer (debug & flakiness)
+
+## Structure du projet
+.
+├── tests
+│   ├── auth
+│   │   ├── login.spec.ts
+│   │   └── logout.spec.ts
+│   ├── cart
+│   │   ├── cart-badge.spec.ts
+│   │   ├── cart-management.spec.ts
+│   │   └── remove-item.spec.ts
+│   ├── checkout
+│   │   └── checkout.spec.ts
+│   ├── inventory
+│   │   ├── inventory.spec.ts
+│   │   ├── products.spec.ts
+│   │   └── sorting.spec.ts
+│
+├── utils
+│   ├── auth.ts
+│   └── cart.ts
+│
+├── playwright.config.ts
+├── package.json
+└── README.md
+
+## Bonnes pratiques QA appliquées
+
+✅ Sélecteurs robustes (data-test, role, text)
+
+❌ Aucun waitForTimeout
+
+✅ Assertions métier, pas seulement techniques
+
+✅ Tests indépendants
+
+✅ Helpers pour éviter la duplication (auth, cart)
+
+✅ Tests négatifs réels
+
+✅ Debug via trace Playwright
+
+✅ Nommage clair des tests et tags (@auth, @cart, @checkout…)
+
+## Installation
 npm install
+
+
+## Installer les navigateurs Playwright :
+
 npx playwright install
-## Exécuter les tests
-Lancer toute la suite :
 
+## Exécution des tests
+Tous les tests
 npx playwright test
-Lancer en headed :
 
-npx playwright test --headed
-Lancer un fichier précis :
-
+Un fichier spécifique
 npx playwright test tests/checkout/checkout.spec.ts
- Exécutions par tags
-Exemples :
 
-npx playwright test --grep "@auth"
-npx playwright test --grep "@inventory"
-npx playwright test --grep "@cart"
-npx playwright test --grep "@checkout"
+Par tag
+npx playwright test --grep @checkout
 
-## Reporting & Debug
-Afficher le rapport HTML :
+Mode headed
+npx playwright test --headed
+
+## Rapports & Debug
+
+Rapport HTML :
 
 npx playwright show-report
-Bonnes pratiques de debug utilisées :
 
-Traces Playwright (sur échec)
 
-Assertions métier (URL, titres, présence produit, badge panier)
+Traces automatiques activées en cas d’échec
 
-Locators stables (data-test, getByRole, getByText quand pertinent)
+Screenshots & vidéos disponibles dans test-results/
 
-## Scénarios couverts (exemples)
-Auth : login valide / login invalide / champs requis / logout
+## Points de vigilance / limites
 
-Inventory : liste produits visible, tri (A→Z, Z→A, prix low→high, high→low)
+Site de démo → données non persistantes
 
-Cart : badge incrément/décrément, contenu du panier, remove item
+Pas de backend réel (API mockées)
 
-Checkout : parcours complet + cas négatif (champs obligatoires)
+Objectif pédagogique & démonstratif
 
-## Choix QA (portfolio)
-Organisation par features (auth, inventory, cart, checkout)
+ Améliorations possibles
 
-Helpers réutilisables (login, ajout au panier)
+Fixtures avancées (authenticatedPage)
 
-Assertions utiles (preuves métier) et suppression des waits artificiels (waitForTimeout)
+storageState pour optimiser le login
+
+Génération de données dynamiques
+
+CI GitHub Actions
+
+Tests API complémentaires
+
+Page Object Model (version avancée)
+
+## Auteur
+
+Said
+QA Engineer / QA Automation
+Playwright · TypeScript · Cypress · API Testing
