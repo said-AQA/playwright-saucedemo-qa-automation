@@ -82,8 +82,9 @@ HTML Report Playwright
 
 Trace Viewer (debug & flakiness)
 
-## Structure du projet
-.
+##  Project Structure
+
+```text
 ├── tests
 │   ├── auth
 │   │   ├── login.spec.ts
@@ -106,6 +107,8 @@ Trace Viewer (debug & flakiness)
 ├── playwright.config.ts
 ├── package.json
 └── README.md
+```
+
 
 ## Bonnes pratiques QA appliquées
 
