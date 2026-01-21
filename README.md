@@ -103,6 +103,7 @@ Trace Viewer (debug & flakiness)
 ├── utils
 │   ├── auth.ts
 │   └── cart.ts
+|   ├── addBikeLightToCart.ts
 │
 ├── playwright.config.ts
 ├── package.json
