@@ -176,11 +176,6 @@ storageState pour optimiser le login
 
 Génération de données dynamiques
 
-CI GitHub Actions
-
-Tests API complémentaires
-
-Page Object Model (version avancée)
 
 ## Auteur
 
