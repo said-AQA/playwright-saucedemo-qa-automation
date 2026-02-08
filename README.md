@@ -150,6 +150,17 @@ npx playwright test --grep @checkout
 Mode headed
 npx playwright test --headed
 
+## Playwright Automation Demo
+
+This video shows an automated end-to-end scenario executed with Playwright.
+
+- Stack: Playwright + TypeScript
+- Mode: Headed execution with slow motion
+- Scope: Login → Inventory → Cart → Checkout
+
+# Download and watch the demo video:  
+[Playwright E2E Demo](docs/demo/saucedemo-playwright-e2e-demo.mp4)
+
 ## Rapports & Debug
 
 Rapport HTML :
