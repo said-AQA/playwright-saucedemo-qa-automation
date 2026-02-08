@@ -1,5 +1,8 @@
 # Playwright SauceDemo – QA Automation Framework
 ## Présentation
+**Demo Video Available**
+
+This repository includes a real execution video for demonstration purposes.
 
 Ce projet est un framework d’automatisation des tests UI développé avec Playwright + TypeScript, appliqué au site de démonstration SauceDemo.
 
