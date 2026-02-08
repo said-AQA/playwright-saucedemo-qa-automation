@@ -158,7 +158,7 @@ This video shows an automated end-to-end scenario executed with Playwright.
 - Mode: Headed execution with slow motion
 - Scope: Login → Inventory → Cart → Checkout
 
-# Download and watch the demo video:  
+### Download and watch the demo video:  
 [Playwright E2E Demo](docs/demo/saucedemo-playwright-e2e-demo.mp4)
 
 ## Rapports & Debug
