@@ -1,5 +1,8 @@
 # Playwright SauceDemo – QA Automation Framework
 ## Présentation
+**Demo Video Available**
+
+This repository includes a real execution video for demonstration purposes.
 
 Ce projet est un framework d’automatisation des tests UI développé avec Playwright + TypeScript, appliqué au site de démonstration SauceDemo.
 
@@ -149,6 +152,17 @@ npx playwright test --grep @checkout
 
 Mode headed
 npx playwright test --headed
+
+## Playwright Automation Demo
+
+This video shows an automated end-to-end scenario executed with Playwright.
+
+- Stack: Playwright + TypeScript
+- Mode: Headed execution with slow motion
+- Scope: Login → Inventory → Cart → Checkout
+
+### Download and watch the demo video:  
+[Playwright E2E Demo](docs/demo/saucedemo-playwright-e2e-demo.mp4)
 
 ## Rapports & Debug
 
