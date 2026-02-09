@@ -14,15 +14,19 @@ export default defineConfig({
   // Rapport HTML, mais ne s'ouvre pas tout seul
   reporter: [['html', { open: 'never' }]],
 
- use: {
+use: {
   baseURL: 'https://www.saucedemo.com/',
   locale: 'fr-FR',
-  headless: true,
+  headless: true,             
   viewport: { width: 1280, height: 800 },
   trace: 'on-first-retry',
   screenshot: 'only-on-failure',
-  video: 'retain-on-failure',
+  video: 'on',
+  launchOptions: {
+    slowMo: 300,              
+  },
 }
+
 ,
 
   projects: [
